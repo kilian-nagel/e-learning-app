@@ -1,0 +1,15 @@
+{
+    "name": "nagel-kilian/e-learning-platform",
+    "autoload": {
+        "psr-4": {
+            "NagelKilian\\ELearningPlatform\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "kilian-nagel",
+            "email": "nagelkilian05@gmail.com"
+        }
+    ],
+    "require": {}
+}

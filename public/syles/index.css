@@ -1,0 +1,28 @@
+/* Custom CSS to set width to 400px at md breakpoint */
+@media (min-width: 568px) {
+    .course.w-100 {
+      min-width: 400px;
+    }
+}
+  
+#courses {
+  overflow-x: auto;
+}
+
+#create textarea[name="content"]{
+  resize:both;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+#create .badge .delete-icon {
+  display: none;
+  position: absolute;
+  border-radius: 8px;
+  bottom:5px;
+  right:-5px;
+}
+
+#create .badge:hover .delete-icon {
+  display: block;
+}
