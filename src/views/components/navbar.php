@@ -28,6 +28,7 @@ function getNavbar($user){
     $authButtons = getAuthButtons();
     $userProfile = $user !== "" ? getUserProfile($user) : "";
     $navbarElement = $user !== "" ? $userProfile : $authButtons; 
+    global $relativeUrl;
 
     echo '
     <nav id="=navbar navbar-expand-lg" class="border-bottom border-primary-subtle">
@@ -42,9 +43,9 @@ function getNavbar($user){
         </div>
         <nav class="lower px-3 pb-3">
             <ul class="nav d-flex">
-                <li class="nav-item"><a href="/" class="nav-link p-0 pe-3 text-secondary">home</a></li>
-                <li class="nav-item"><a href="/courses" class="nav-link p-0 pe-3 text-secondary">courses</a></li>
-                <li class="nav-item"><a href="/create" class="nav-link p-0 pe-3 text-secondary">create</a></li>
+                <li class="nav-item"><a href="'.$relativeUrl.'" class="nav-link p-0 pe-3 text-secondary">home</a></li>
+                <li class="nav-item"><a href="'.$relativeUrl.'/courses" class="nav-link p-0 pe-3 text-secondary">courses</a></li>
+                <li class="nav-item"><a href="'.$relativeUrl.'/create" class="nav-link p-0 pe-3 text-secondary">create</a></li>
                 <li class="nav-item"><a href="" class="nav-link p-0 pe-3 text-secondary">settings</a></li>
                 <li class="nav-item"><a href="" class="nav-link p-0 pe-3 text-secondary">about</a></li>
             </ul>

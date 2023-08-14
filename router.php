@@ -3,12 +3,12 @@ require_once "./src/views/components/navbar.php";
 require_once "./src/views/components/footer.php";
 
 $uri = $_SERVER["REQUEST_URI"];
+$relativeUrl = "/e-learning-platform";
 
 $routes = [
-    "/"=>["index.php","./src/views/landing.php"],
-    "/hello"=>["./src/controllers/hello.php"],
-    "/courses"=>["./src/views/courses.php"],
-    "/create"=>["./src/views/create.php"],
+    "$relativeUrl/"=>["index.php","./src/views/landing.php"],
+    "$relativeUrl/courses"=>["./src/views/courses.php"],
+    "$relativeUrl/create"=>["./src/views/create.php"],
 ];
 
 function abort($code = 404){
