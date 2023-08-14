@@ -19,6 +19,7 @@ function abort($code = 404){
 $navbar = getNavbar($user);
 $footer = getFooter();
 $main = "";
+
 if(array_key_exists($uri,$routes) && filesExist($routes[$uri])){   
     foreach ($routes[$uri] as $route){
         require_once "$route";
@@ -29,9 +30,9 @@ if(array_key_exists($uri,$routes) && filesExist($routes[$uri])){
 }
 
 if($dbConnection){
-    echo "i'm the goat";
+    echo "success";
 } else {
-    echo "nooooooooooooooo";
+    echo "fail";
 }
 
 echo $navbar;
