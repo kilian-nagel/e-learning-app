@@ -29,12 +29,6 @@ if(array_key_exists($uri,$routes) && filesExist($routes[$uri])){
     abort();
 }
 
-if($dbConnection){
-    echo "success";
-} else {
-    echo "fail";
-}
-
 echo $navbar;
 echo $main;
 echo $footer;
